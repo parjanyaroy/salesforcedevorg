@@ -1,0 +1,29 @@
+.THIS {
+ -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 70%;
+  margin: 10px;
+  padding: 20px;
+  overflow: hidden;
+  border: none;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font: normal 20px/1 Tahoma, Geneva, sans-serif;
+  color: rgba(0,0,0,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: #7dc4e0;
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(15,2,2,0.66) ;
+  box-shadow: 1px 1px 1px 1px rgba(15,2,2,0.66) ;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2) ;
+}
+
+buttonFill.THIS {
+display: block;
+margin: 10px 0;
+padding: 10px;
+width: 100%;
+background-color: red;
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RelaySwitch</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RelaySwitches</value>
+    </caseValues>
+    <fields>
+        <label><!-- Last Turned On --></label>
+        <name>LastTurnedOn__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relay --></label>
+        <name>Relay__c</name>
+        <relationshipLabel><!-- RelaySwitches --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>POWER OFF</masterLabel>
+            <translation><!-- POWER OFF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POWER ON</masterLabel>
+            <translation><!-- POWER ON --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SwitchNumber --></label>
+        <name>SwitchNumber__c</name>
+        <picklistValues>
+            <masterLabel>SW1</masterLabel>
+            <translation><!-- SW1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SW2</masterLabel>
+            <translation><!-- SW2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SW3</masterLabel>
+            <translation><!-- SW3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SW4</masterLabel>
+            <translation><!-- SW4 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Wattage --></label>
+        <name>Wattage__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Relay</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Relays</value>
+    </caseValues>
+    <fields>
+        <label><!-- DeviceEndPointUrl --></label>
+        <name>DeviceEndPointUrl__c</name>
+    </fields>
+    <fields>
+        <label><!-- HADevice --></label>
+        <name>HADevice__c</name>
+        <relationshipLabel><!-- Relays --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- NetworkFailureOccurred --></label>
+        <name>NetworkFailureRecorded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operating Mode --></label>
+        <name>Operating_Mode__c</name>
+        <picklistValues>
+            <masterLabel>Cloud-Sync</masterLabel>
+            <translation><!-- Cloud-Sync --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fresh-Start</masterLabel>
+            <translation><!-- Fresh-Start --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

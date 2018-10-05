@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>Send Email By Activating Trigger {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Send Email By Activating Trigger2</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>set_email_trigger_box_to_false</name>
+        <label>set email trigger box to false</label>
+        <locationX>257</locationX>
+        <locationY>173</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>accountIdformailtrigger</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Email_Trigger__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>set_email_trigger_box_to_true</name>
+        <label>set email trigger box to true</label>
+        <locationX>187</locationX>
+        <locationY>49</locationY>
+        <connector>
+            <targetReference>set_email_trigger_box_to_false</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>accountIdformailtrigger</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Email_Trigger__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <startElementReference>set_email_trigger_box_to_true</startElementReference>
+    <variables>
+        <name>accountIdformailtrigger</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

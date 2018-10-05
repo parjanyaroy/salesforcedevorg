@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Switch</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Switch</value>
+    </caseValues>
+    <fields>
+        <label><!-- Room --></label>
+        <name>Room__c</name>
+        <relationshipLabel><!-- Switch --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Switch Description --></label>
+        <name>SwitchDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wattage --></label>
+        <name>Wattage__c</name>
+    </fields>
+    <fields>
+        <label><!-- isSwitchedOn --></label>
+        <name>isSwitchedOn__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

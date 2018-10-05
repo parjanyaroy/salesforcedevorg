@@ -1,0 +1,82 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" controller="RelayControllerCard">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="relayFields" type="String[]" default="Operating_Mode__c"/>
+    <!--<aura:handler name="init" value="{!this}" action="{!c.getAllDetailsForRelay}" />
+    <aura:handler event="force:refreshView" action="{!c.getAllDetailsForRelay}" />-->
+    
+   
+<aura:attribute name="parentRelay" type="Relay__c"/>
+<force:recordData aura:id="relayRecord"
+                recordId="{!v.recordId}"
+                targetFields="{!v.parentRelay}"
+                layoutType="FULL"/>
+<lightning:card iconName="standard:user" title="{! 'Device Configuration Details: '}">
+<div class="slds-p-left_large slds-p-right_medium">
+            <lightning:recordForm aura:id="relayForm"
+                                recordId="{!v.parentRelay.Id}"
+                                objectApiName="Relay__c"
+                                fields="{!v.relayFields}"
+                                columns="2"
+                                mode="View"/>
+        </div>
+</lightning:card>
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	<article class="slds-card">
+  <div class="slds-grid slds-einstein-header slds-card__header">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+        <div class="slds-media__figure">
+          <span class="slds-icon_container slds-icon-utility-salesforce1">
+            <!--<svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#salesforce1"></use>
+            </svg>-->
+          </span>
+        </div>
+        <div class="slds-media__body">
+          <h1 class="slds-truncate" title="Device Control Panel">
+              <span class="slds-text-heading_medium"><b>Device Control Panel</b></span>
+            </h1>
+        </div>
+          <aura:if isTrue="{!v.parentRelay.NetworkFailureRecorded__c}">
+          <div class="slds-media__body">
+          <h2 class="slds-truncate" title="Network Issue Detected">
+              <span class="slds-text-heading_small">
+                  <div class="slds-text-color_error"><b><u>Network Issue Detected</u></b></div></span>
+            </h2>
+        </div>
+          <div class="slds-media__body">
+          <img height="42" width="42" src="{!$Resource.HomeAutomation_NoNetwork}"/>
+        </div>
+          </aura:if>
+       </div>
+    </header>
+    <div class="slds-einstein-header__actions">
+      <div class="slds-button-group" role="group">
+        <button class="slds-button slds-button_icon slds-button_icon-border-filled" title="Report An Issue" aria-pressed="false">
+          <!--<svg class="slds-button__icon" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#edit"></use>
+          </svg>-->
+            <lightning:icon iconName="utility:email"  size="small" alternativeText="Report An Issue"/>
+          <span class="slds-assistive-text">Report An Issue</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="slds-card__body slds-card__body_inner">
+      <c:RelayControllerComponent recordId="{!v.recordId}"></c:RelayControllerComponent>
+        </div>
+  <footer class="slds-card__footer">
+   Powered by Deloitte LLP
+  </footer>
+</article>
+</aura:component>

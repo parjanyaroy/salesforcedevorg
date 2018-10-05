@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SwitchLog</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SwitchLogs</value>
+    </caseValues>
+    <fields>
+        <label><!-- ActionAtStateStart --></label>
+        <name>ActionAtStateStart__c</name>
+        <picklistValues>
+            <masterLabel>NETWORK FAILURE</masterLabel>
+            <translation><!-- NETWORK FAILURE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POWER OFF</masterLabel>
+            <translation><!-- POWER OFF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POWER ON</masterLabel>
+            <translation><!-- POWER ON --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RelaySwitch --></label>
+        <name>RelaySwitch__c</name>
+        <relationshipLabel><!-- SwitchLogs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- StateStartTime --></label>
+        <name>StateStartTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- StateStopTime --></label>
+        <name>StateStopTime__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

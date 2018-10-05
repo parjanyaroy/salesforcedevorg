@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Payments</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Payments</value>
+    </caseValues>
+    <fields>
+        <label><!-- amount --></label>
+        <name>amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- datePaid --></label>
+        <name>datePaid__c</name>
+    </fields>
+    <fields>
+        <label><!-- dateRequested --></label>
+        <name>dateRequested__c</name>
+    </fields>
+    <fields>
+        <label><!-- id --></label>
+        <name>id__c</name>
+    </fields>
+    <fields>
+        <label><!-- mechanismID --></label>
+        <name>mechanismID__c</name>
+    </fields>
+    <fields>
+        <label><!-- status --></label>
+        <name>status__c</name>
+    </fields>
+    <fields>
+        <label><!-- userID --></label>
+        <name>userID__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

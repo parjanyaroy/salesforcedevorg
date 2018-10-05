@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <interviewLabel>CreateASwitchFlow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CreateASwitchFlow</label>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>CreateSwitchForTheRoom</name>
+        <label>Create Switch For The Room</label>
+        <locationX>527</locationX>
+        <locationY>55</locationY>
+        <assignRecordIdToReference>switchId</assignRecordIdToReference>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>Switch_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Wattage__c</field>
+            <value>
+                <elementReference>Wattage</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Switch__c</object>
+    </recordCreates>
+    <screens>
+        <name>Create_Switch_For_Room</name>
+        <label>Create Switch For Room</label>
+        <locationX>247</locationX>
+        <locationY>57</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CreateSwitchForTheRoom</targetReference>
+        </connector>
+        <fields>
+            <name>Switch_Name</name>
+            <dataType>String</dataType>
+            <fieldText>Switch Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Wattage</name>
+            <dataType>Number</dataType>
+            <fieldText>Wattage</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <name>Switch_Description</name>
+            <fieldText>Switch Description</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Parent_Room</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>recordId</elementReference>
+            </defaultValue>
+            <fieldText>Parent Room</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+    </screens>
+    <startElementReference>Create_Switch_For_Room</startElementReference>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>switchId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

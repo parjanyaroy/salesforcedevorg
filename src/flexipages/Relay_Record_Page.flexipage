@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>collapsed</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentName>force:highlightsPanel</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>decorate</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;span style=&quot;color:#8B4513;&quot;&gt;&lt;span style=&quot;font-family:arial,helvetica,sans-serif;&quot;&gt;&lt;span style=&quot;font-size:18px;&quot;&gt;You are currently using &lt;b&gt;Cloud-Sync &lt;/b&gt;mode of operation.You can configure the panel switches which will be reflected on the device &lt;b&gt;when connection is estabilished with the device.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>decorate</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;span style=&quot;color:#FF0000;&quot;&gt;&lt;span style=&quot;font-size:18px;&quot;&gt;&lt;span style=&quot;font-family:arial,helvetica,sans-serif;&quot;&gt;You are currently using &lt;b&gt;Fresh-Start&amp;nbsp;&lt;/b&gt;mode of operation.You can will not be able to configure any switches from their current state. All switches will be turned &lt;u&gt;&lt;b&gt;off&lt;/b&gt;&lt;/u&gt;&amp;nbsp;&lt;b&gt;when connection is estabilished with the device.&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>RelayControllerCardComponent</componentName>
+        </componentInstances>
+        <mode>Replace</mode>
+        <name>header</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <mode>Replace</mode>
+        <name>main</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <mode>Replace</mode>
+        <name>sidebar</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Relay Record Page</masterLabel>
+    <pageTemplate>flexipage:recordHomeTemplateDesktop</pageTemplate>
+    <parentFlexiPage>flexipage__default_rec_L</parentFlexiPage>
+    <sobjectType>Relay__c</sobjectType>
+    <type>RecordPage</type>
+</FlexiPage>

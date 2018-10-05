@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Case_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+    </actionOverrides>
+    <formFactors>Small</formFactors>
+    <formFactors>Medium</formFactors>
+    <formFactors>Large</formFactors>
+    <navType>Standard</navType>
+    <tab>standard-home</tab>
+    <tab>standard-Opportunity</tab>
+    <tab>standard-Lead</tab>
+    <tab>standard-Task</tab>
+    <tab>standard-File</tab>
+    <tab>standard-Account</tab>
+    <tab>standard-Contact</tab>
+    <tab>standard-Campaign</tab>
+    <tab>standard-Dashboard</tab>
+    <tab>standard-report</tab>
+    <tab>standard-Feed</tab>
+    <tab>standard-CollaborationGroup</tab>
+    <tab>standard-Event</tab>
+    <tab>standard-OtherUserProfile</tab>
+    <tab>standard-Case</tab>
+    <tab>standard-Forecasting3</tab>
+    <tab>OrderDetails__x</tab>
+    <tab>CourseMaster__c</tab>
+    <tab>Lecture__c</tab>
+    <tab>Energy_Audit__c</tab>
+    <tab>Camping_Item__c</tab>
+    <tab>Waypoint__c</tab>
+    <tab>Drink_Order__c</tab>
+    <tab>Widget__c</tab>
+    <tab>HADevice__c</tab>
+    <tab>RelaySwitch__c</tab>
+    <tab>Relay__c</tab>
+    <uiType>Lightning</uiType>
+</CustomApplication>

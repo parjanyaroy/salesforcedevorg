@@ -1,0 +1,78 @@
+<aura:component controller="NewControllerForContact" implements="flexipage:availableForAllPageTypes">
+    <!-- Aura Handler -->
+    <aura:handler name="init" value="{!this}" action="{!c.myAction}"/>
+    
+    
+    <!-- Aura: Attribute here -->
+    <aura:attribute name="sFormStatus" type="Boolean" default="false"/>
+    <aura:attribute name="objWrapper" type="Object"/>
+    <!--{!v.sFormStatus}-->
+    <aura:attribute name="sFirstName" type="String" default="Parjanya"/>
+    <aura:attribute name="sLastName" type="String" default="Roy"/>
+    <aura:attribute name="sTextArea" type="String" default="This is a sample text area"/>
+    <aura:attribute name="sDOB" type="Date" default="1990-12-03"/>
+    <aura:attribute name="sEmail" type="String" default="parjanyaroy@gmail.com"/>
+    <!-- Aura : Attribute ends here -->
+    <div class="slds-grid slds-wrap">
+        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2">
+            <div class=" slds-m-around_x-small">
+                <!--<lightning:input aura:id="firstName" name="First Name" label="{!$Label.c.firstName}" value="{!v.sFirstName}"/>-->
+                <lightning:input aura:id="firstName" name="First Name" label="{!$Label.c.firstName}" value="{!v.objWrapper.firstName}"/>
+            </div>
+        </div>
+        
+        
+        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2">
+            <div class=" slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                <!--<lightning:input aura:id="lastName" name="Last Name" label="{!$Label.c.lastName}" value="{!v.sLastName}"/>-->
+                <lightning:input aura:id="lastName" name="Last Name" label="{!$Label.c.lastName}" value="{!v.objWrapper.lastName}"/>
+            </div>
+        </div>
+        
+        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2">
+            <div class="slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                <!--<lightning:input aura:id="email" type="email" value="{!v.sEmail}" label="{!$Label.c.email}" />-->
+                <lightning:input aura:id="email" type="email" value="{!v.objWrapper.email}" label="{!$Label.c.email}" />
+            </div>
+        </div>
+        
+        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2">
+            <div class="slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                <!--   <lightning:input type="date"  label="{!$Label.c.dateOfBirth}" value="{!v.sDOB}" />   -->
+                <!--<ui:inputDate aura:id="dob" label="{!$Label.c.dateOfBirth}"  displayDatePicker="true"  value="{!v.sDOB}"/>   -->
+                <ui:inputDate aura:id="dob" label="{!$Label.c.dateOfBirth}"  displayDatePicker="true"  value="{!v.objWrapper.myDOB}"/>   
+            </div>
+        </div>
+        
+        <div class="slds-size_1-of-1">
+            <div class=" slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                <!--<lightning:textarea aura:id="aboutme" label="{!$Label.c.textArea}" name="reason" value="{!v.sTextArea}" />-->
+                <lightning:textarea aura:id="aboutme" label="{!$Label.c.textArea}" name="reason" value="{!v.objWrapper.aboutMyself}" />
+            </div>
+        </div>
+        
+        <!-- Buttons -->
+        
+        <div class="slds-box_x-small slds-text-align_left slds-m-around_x-small">
+            <lightning:button class="buttonFill" variant="brand" label="{!$Label.c.submit}" title="Submit" onclick="{!c.handleSave}" />
+        </div>
+        <div class="slds-box_x-small slds-text-align_left slds-m-around_x-small">
+            <lightning:button class="buttonFill" variant="neutral" label="{!$Label.c.cancel}" title="Cancel" />
+        </div>
+        <div class="slds-box_x-small slds-text-align_left slds-m-around_x-small">
+            <lightning:button class="buttonFill" variant="neutral" label="Clear Form" title="Clear Form" onclick="{!c.clearForm}" />
+        </div>
+        
+        <div class="slds-box_x-small slds-text-align_left slds-m-around_x-small">
+            <lightning:button aura:id="formActionButton" class="buttonFill" variant="neutral" label="Form Action" title="Form Action" onclick="{!c.toggleStatus}" />
+        </div>
+        
+        <!-- End Buttons -->
+        <!-- Spinner -->
+        <lightning:spinner class="slds-hide" aura:id="mySpinner" />
+        <!-- End Spinner -->
+        <!-- TOAST -->
+        <!-- /TOAST -->
+        
+    </div>
+</aura:component>
